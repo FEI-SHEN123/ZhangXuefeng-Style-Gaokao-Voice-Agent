@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>语音咨询 MVP</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar" aria-label="应用状态">
+        <div>
+          <h1>语音咨询 MVP</h1>
+          <p>AI 生成的风格化升学与职业咨询，不代表本人观点。</p>
+        </div>
+        <div class="status" id="status">待机</div>
+      </section>
+
+      <section class="workspace">
+        <div class="conversation" id="conversation" aria-live="polite"></div>
+
+        <form class="composer" id="textForm">
+          <textarea
+            id="textInput"
+            rows="3"
+            placeholder="也可以直接输入文字，比如：我家孩子河南理科 610 分，想学计算机，怎么选？"
+          ></textarea>
+          <div class="actions">
+            <button class="secondary" type="button" id="recordButton">开始录音</button>
+            <button type="submit" id="sendButton">发送文字</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
